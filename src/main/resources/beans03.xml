@@ -8,7 +8,11 @@
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<bean id="myFirstBean" class="pl.sternik.pb.zadania.spring.zad01.MyFirstBean" lazy-init="true">
-		<property name="name" value="Moja nazwa!"></property>
+		<property name="name" value="Hello 1st Bean!"></property>
 	</bean>
-
+	<bean id="myThirdBean" class="pl.sternik.pb.zadania.spring.zad03.MyThirdBean">
+		<property name="name" value="3rd Hello Bean!"></property>
+		<property name="bean" ref="myFirstBean"></property>
+	</bean>
+	
 </beans>
